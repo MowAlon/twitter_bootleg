@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <%#= image_tag current_user.profile_image_url %><%= image_tag "https://pbs.twimg.com/profile_images/950124641/Alon_so_cool_Twitter.jpg", size: "300x300" %>
+      <h1><%= current_user.name %></h1>
+      <h1>@<%= current_user.screen_name %></h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            Description:<br>
+            Location:<br>
+            Tweeting since:
+          </div>
+          <div class="col-md-10">
+            <%#= current_user.description %><%= "Quite a fellow" %><br>
+            <%#= current_user.location %><%= "Behind you" %><br>
+            <%#= current_user.created_at.strftime("%B %d, %Y") %><%= Time.now.strftime("%B %d, %Y") %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <!--  Feed  -->
+      <h1>What are the cool people saying?</h1>
+      <%= render 'tweet' %>
+    </div>
+  </div>
+</div>

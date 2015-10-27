@@ -1,0 +1,6 @@
+<div class="center">
+  <%= form_for @tweet do |f| %>
+    <%= f.text_field :tweet, placeholder: "Tweet up to 140 delectable characters.", class: "form-control" %><br>
+    <%= f.submit "Go on... tell the world what's so darn important!", class: "btn btn-primary" %>
+  <% end %>
+</div>
