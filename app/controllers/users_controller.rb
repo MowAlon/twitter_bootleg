@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
   def show
-    @tweets = ["Lots o' tweets", "Even more tweets"]
+    @statuses = Status.new(current_user).all
   end
 end
