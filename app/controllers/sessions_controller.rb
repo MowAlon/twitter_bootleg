@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     #   session[:user_id] = user.id
     # end
     # redirect_to profile_path
-    render text: "Hi, there!"
+    render text: request.env["omniauth.auth"]
   end
 
   def destroy
