@@ -1,11 +1,12 @@
 class StatusesController < ApplicationController
 
-  def index
-    @statuses = Status.new(current_user).all
+  def new
+    @user = current_user.twitter.user
   end
 
-  def show
-    @status = Status.find(params[:id])
+  def create
+    current_user.twitter.update(params[:status])
+    redirect_to profile_path
   end
 
 end

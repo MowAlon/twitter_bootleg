@@ -23,6 +23,33 @@ textarea {
   margin-bottom: 10px;
 }
 
+.twitter-counts {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.star {
+  font-size: x-large;
+}
+
+.favorite {
+  color: hotpink;
+  &:hover {
+      color: pink;
+    }
+}
+
+.profile-extras {
+  font-size: x-small;
+  vertical-align: top;
+}
+
+.label {
+  color: black;
+  font-weight: bold;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {

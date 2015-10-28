@@ -11,4 +11,14 @@ class User < ActiveRecord::Base
     user.save
     user
   end
+
+  def twitter
+    Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV["twitter_api_key"]
+      config.consumer_secret     = ENV["twitter_api_secret"]
+      config.access_token        = oauth_token
+      config.access_token_secret = oauth_token_secret
+    end
+  end
+
 end

@@ -1,3 +1,29 @@
 <% @statuses.each do |status| %>
-  <div class="panel"><%= status.text %></div>
+  <div class="row well col-md-7">
+    <div class="row">
+      <div class="col-md-2 center">
+        <%= link_to image_tag(status.user.profile_image_url), status.user.url.to_s %>
+        <h6><%= link_to status.user.name, status.user.url.to_s %></h6>
+      </div>
+      <div class="col-md-9">
+        <%= status.text %>
+      </div>
+      <div class="col-md-1 center">
+        <div>
+          <% if !status.favorited? %>
+            <%= link_to favorites_path(status.id), method: :post do %>
+              <i class="glyphicon glyphicon-star-empty star"></i>
+            <% end %>
+          <% else %>
+            <%= link_to favorites_path(status.id), method: :delete do %>
+              <i class="glyphicon glyphicon-star star favorite"></i>
+            <% end %>
+          <% end %>
+        </div>
+        <div>
+          <%= status.favorite_count %>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>

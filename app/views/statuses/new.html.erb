@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <%= render "layouts/profile_summary" %>
+    </div>
+
+    <div class="col-md-7 center">
+      <h1>Send a Tweet!</h1>
+      <br>
+      <%= form_tag statuses_path do %>
+        <%= text_area_tag :status, nil, placeholder: "Tweet up to 140 delectable characters.", class: "form-control" %><br>
+        <%= submit_tag "Go on... tell the world what's so darn important.", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

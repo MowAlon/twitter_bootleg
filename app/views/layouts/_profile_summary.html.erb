@@ -1,17 +1,47 @@
-<%#= image_tag current_user.profile_image %><%= image_tag "https://pbs.twimg.com/profile_images/950124641/Alon_so_cool_Twitter.jpg", size: "300x300" %>
-<h1><%= current_user.name %></h1>
-<h1>@<%= current_user.screen_name %></h1>
+<div class="center">
+  <%= image_tag current_user.profile_image.sub("_normal.jpg",".jpg"), size: "300x300" %>
+  <table class="center twitter-counts">
+    <tr>
+      <td>
+        <div><strong>Tweets</strong></div>
+        <div><%= @user.tweets_count %></div>
+      </td>
+      <td>
+        <div><strong>Following</strong></div>
+        <div><%= @user.friends_count %></div>
+      </td>
+      <td>
+        <div><strong>Followers</strong></div>
+        <div><%= @user.followers_count %></div>
+      </td>
+    </tr>
+  </table>
+
+  <h1><%= current_user.name %></h1>
+  <h3><%= link_to "@#{current_user.screen_name}", @user.url.to_s %> says...</h3>
+  <h2 class="center">"<%= @user.status.text %>"</h2>
+
+</div>
+
 <div class="container">
   <div class="row">
-    <div class="col-md-2">
-      Description:<br>
-      Location:<br>
-      Tweeting since:
-    </div>
-    <div class="col-md-10">
-      <%#= current_user.description %><%= "Quite a fellow" %><br>
-      <%#= current_user.location %><%= "Behind you" %><br>
-      <%#= current_user.created_at.strftime("%B %d, %Y") %><%= Time.now.strftime("%B %d, %Y") %>
+    <div class="col-md-5">
+      <table>
+        <tbody class="profile-extras">
+          <tr>
+            <td class="label">Description:</td><td><%= @user.description %></td>
+          </tr>
+          <tr>
+            <td class="label">Location:</td><td><%= @user.location %></td>
+          </tr>
+          <tr>
+            <td class="label">Website:</td><td><%= link_to @user.website %></td>
+          </tr>
+          <tr>
+            <td class="label">Since:</td><td><%= @user.created_at.strftime("%B %d, %Y") %></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
