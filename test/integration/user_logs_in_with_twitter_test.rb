@@ -9,14 +9,15 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
   end
 
   test "logging in" do
-    visit "/"
-    assert_equal 200, page.status_code
-    click_link "Login"
-    assert_equal "/profile", current_path
-    save_and_open_page
-    
-    assert page.has_content?("Alon")
-    assert page.has_link?("Logout")
+    VCR.use_cassette("user_logs_in") do
+      visit "/"
+      assert_equal 200, page.status_code
+      click_link "Login"
+      assert_equal "/profile", current_path
+
+      assert page.has_content?("Alon")
+      assert page.has_link?("Logout")
+    end
   end
 
   def stub_omniauth
@@ -28,14 +29,14 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
       provider: 'twitter',
       extra: {
         raw_info: {
-          user_id: "1234",
-          name: "Alon",
+          user_id: "150688890",
+          name: "Alon Waisman",
           screen_name: "MowAlon",
         }
       },
       credentials: {
-        token: "TimTam",
-        secret: "TimTamSlam"
+        token: ENV["alon_token"],
+        secret: ENV["alon_secret"]
       }
     })
   end
