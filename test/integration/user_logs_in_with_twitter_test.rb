@@ -21,7 +21,7 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
   end
 
   def stub_omniauth
-    # first, set OmniAuth to run in test mode
+    # First, set OmniAuth to run in test mode
     OmniAuth.config.test_mode = true
     # then, provide a set of fake oauth data that
     # omniauth will use when a user tries to authenticate:
