@@ -2,9 +2,9 @@ require 'test_helper'
 
 class TwitterTest < ActiveSupport::TestCase
 
-  test "" do
+  test "testing crazy database bug" do
   end
-  # byebug
+
   # test "it can connect and retrieve info from Twitter - use #current_user" do
   #   alon = User.find_by(name: "Alon Waisman")
   #   screen_name = alon.screen_name
