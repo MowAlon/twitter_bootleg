@@ -20,18 +20,20 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
 gem 'figaro'
 gem 'omniauth-twitter'
 gem 'bootstrap-sass'
 gem 'twitter'
-gem 'pry-rails'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'pry-rails'
   gem 'capybara'
   gem 'pry'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :test do
+  gem "vcr"
+  gem "webmock"
 end

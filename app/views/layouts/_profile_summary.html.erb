@@ -1,5 +1,5 @@
 <div class="center">
-  <%= image_tag current_user.profile_image.sub("_normal.jpg",".jpg"), size: "300x300" %>
+  <%= image_tag @user.profile_image_url.to_s.sub("_normal.","."), size: "300x300" %>
   <table class="center twitter-counts">
     <tr>
       <td>
