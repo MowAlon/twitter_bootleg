@@ -8795,87 +8795,88 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* line 26, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* custom */
+/* line 28, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .twitter-counts {
   width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 32, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 34, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .profile-extras {
   font-size: small;
   vertical-align: top;
 }
 
-/* line 37, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 39, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .labels {
   font-weight: bold;
   padding-right: 5px;
 }
 
-/* line 42, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 44, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .well {
   background-color: white;
   box-shadow: 3px 3px 10px black;
 }
 
-/* line 47, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 49, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .profile-status {
   margin: 3%;
 }
 
-/* line 51, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 53, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .small-profile {
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
 /* glyphicons */
-/* line 58, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 60, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .big-glyph {
   font-size: x-large;
 }
 
-/* line 62, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 64, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .favorited {
   color: hotpink;
 }
-/* line 64, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 66, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .favorited:hover {
   color: pink;
 }
 
-/* line 69, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 71, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .retweeted {
   color: hotpink;
 }
-/* line 71, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 73, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .retweeted:hover {
   color: pink;
 }
 
-/* line 76, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 78, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .trash {
   color: red;
   float: right;
 }
-/* line 79, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 81, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .trash:hover {
   color: hotpink;
 }
 
-/* line 84, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 86, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .fire {
   color: red;
   font-size: small;
 }
-/* line 87, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 89, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .fire:hover {
   color: orange;
 }
 
-/* line 92, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 94, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .extras-separator {
   border-color: #ddd;
   margin-top: 5px;
@@ -8883,19 +8884,19 @@ textarea {
 }
 
 /* typography */
-/* line 100, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 102, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-/* line 104, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 106, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 h1 {
   font-size: 3em;
   margin-bottom: 30px;
   text-align: center;
 }
 
-/* line 110, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 112, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 h2 {
   font-size: 1.2em;
   margin-bottom: 30px;
@@ -8904,14 +8905,14 @@ h2 {
   color: #777;
 }
 
-/* line 118, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 120, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
 
 /* buttons */
-/* line 125, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
+/* line 127, /Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/assets/stylesheets/custom.css.scss */
 .btn {
   margin-top: 8px;
 }
