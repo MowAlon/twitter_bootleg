@@ -17,3 +17,5 @@
 
 # Ignore VCR cassettes
 /test/cassettes
+
+# Ignore SimpleCov results

@@ -1,0 +1,115 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/controllers/welcome_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        13,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/helpers/application_helper.rb": [
+        1,
+        1,
+        null,
+        1,
+        44,
+        null,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/helpers/favorites_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/helpers/friendships_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/helpers/retweets_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/models/user.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        6,
+        6,
+        6,
+        6,
+        6,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/mowalon/Documents/Turing/Module3/homework/twitter_bootleg/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1446102460
+  }
+}
