@@ -1,43 +1,43 @@
-<div class="center">
-  <%= image_tag @user.profile_image_url.to_s.sub("_normal.","."), size: "300x300" %>
-  <table class="center twitter-counts">
-    <tr>
-      <td>
-        <div><strong>Tweets</strong></div>
-        <div><%= @user.tweets_count %></div>
-      </td>
-      <td>
-        <div><strong>Following</strong></div>
-        <div><%= @user.friends_count %></div>
-      </td>
-      <td>
-        <div><strong>Followers</strong></div>
-        <div><%= @user.followers_count %></div>
-      </td>
-    </tr>
-  </table>
+<div class="container col-md-12">
 
-  <h1><%= current_user.name %></h1>
-  <h3><%= link_to "@#{current_user.screen_name}", @user.url.to_s %> said...</h3>
-</div>
+  <div class="row center">
+    <h1><%= current_user.name %></h1>
+    <%= image_tag @user.profile_image_url.to_s.sub("_normal.","."), size: "300x300" %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 well">
-      <h2 class="center">"<%= @user.status.text %>"</h2>
-      <%= link_to status_path(@user.status.id), method: :delete do %>
-        <i class="glyphicon glyphicon-trash big-glyph trash"></i>
-      <% end %>
+    <table class="center twitter-counts">
+      <tr>
+        <td>
+          <div><strong>Tweets</strong></div>
+          <div><%= @user.tweets_count %></div>
+        </td>
+        <td>
+          <div><strong>Following</strong></div>
+          <div><%= @user.friends_count %></div>
+        </td>
+        <td>
+          <div><strong>Followers</strong></div>
+          <div><%= @user.followers_count %></div>
+        </td>
+      </tr>
+    </table>
+
+    <h3><%= link_to "@#{current_user.screen_name}", @user.url.to_s %> said...</h3>
+  </div>
+
+  <div class="row well profile-status">
+    <div class="col-md-10">
+        <h2 class="center">"<%= sanitize(auto_link(@user.status.text)) %>"</h2>
     </div>
-    <div class="col-md-1">
-      <br>
+    <div class="col-md-2">
+      <div class="trash">
+        <%= link_to status_path(@user.status.id), method: :delete do %>
+          <i class="glyphicon glyphicon-trash big-glyph trash"></i>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container">
   <div class="row">
-    <div class="col-md-5">
       <table>
         <tbody class="profile-extras">
           <tr>
@@ -54,6 +54,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
   </div>
+
 </div>

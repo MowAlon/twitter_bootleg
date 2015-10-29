@@ -24,6 +24,7 @@ gem 'figaro'
 gem 'omniauth-twitter'
 gem 'bootstrap-sass'
 gem 'twitter'
+gem 'twitter-text'
 
 group :development, :test do
   gem 'pry-rails'

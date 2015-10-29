@@ -39,6 +39,14 @@ textarea {
   font-weight: bold;
 }
 
+.well {
+  box-shadow: 3px 3px 10px black;
+}
+
+.profile-status {
+  margin: 3%;
+}
+
 /* glyphicons */
 
 .big-glyph {
@@ -62,6 +70,7 @@ textarea {
 .trash {
   color: red;
   float: right;
+  margin-top: 50%;
   &:hover {
     color: hotpink;
   }
