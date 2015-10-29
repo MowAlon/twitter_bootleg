@@ -8,10 +8,11 @@ Rails.application.routes.draw do
   get '/logout', as: :logout, to: 'sessions#destroy'
   get '/auth/twitter/callback', to: 'sessions#create'
   get '/profile', to: 'users#show'
-  resources :statuses, only: [:new, :create]
+  resources :statuses, only: [:new, :create, :destroy]
   post '/favorites/:id', as: :favorites, to: 'favorites#create'
   delete '/favorites/:id', to: 'favorites#destroy'
-  # resources :favorites, only: [:create, :destroy]
+  delete '/friendships/:id', as: :friendships, to: 'friendships#destroy'
+  post '/retweets/:id', as: :retweets, to: 'retweets#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

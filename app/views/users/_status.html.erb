@@ -4,24 +4,46 @@
       <div class="col-md-2 center">
         <%= link_to image_tag(status.user.profile_image_url), status.user.url.to_s %>
         <h6><%= link_to status.user.name, status.user.url.to_s %></h6>
+        <%= link_to friendships_path(status.user.id), method: :delete, class: "fire" do %>
+          <i class="glyphicon glyphicon-fire "></i> unfollow <i class="glyphicon glyphicon-fire "></i>
+        <% end %>
       </div>
       <div class="col-md-9">
-        <%= status.text %>
+        <h2><%= status.text %></h2>
       </div>
       <div class="col-md-1 center">
-        <div>
-          <% if !status.favorited? %>
-            <%= link_to favorites_path(status.id), method: :post do %>
-              <i class="glyphicon glyphicon-star-empty star"></i>
+        <div class="favorite-box">
+          <div>
+            <% if !status.favorited? %>
+              <%= link_to favorites_path(status.id), method: :post do %>
+                <i class="glyphicon glyphicon-star-empty big-glyph"></i>
+              <% end %>
+            <% else %>
+              <%= link_to favorites_path(status.id), method: :delete do %>
+                <i class="glyphicon glyphicon-star big-glyph favorited"></i>
+              <% end %>
             <% end %>
-          <% else %>
-            <%= link_to favorites_path(status.id), method: :delete do %>
-              <i class="glyphicon glyphicon-star star favorite"></i>
-            <% end %>
-          <% end %>
+          </div>
+          <div>
+            <%= status.favorite_count %>
+          </div>
         </div>
-        <div>
-          <%= status.favorite_count %>
+        <hr class="extras-separator">
+        <div class="retweet-box">
+          <div>
+            <% if !status.retweeted? %>
+              <%= link_to retweets_path(status.id), method: :post do %>
+                <i class="glyphicon glyphicon-retweet big-glyph not-retweeted"></i>
+              <% end %>
+            <% else %>
+              <span class="glyphicon glyphicon-retweet big-glyph retweeted"></span>
+            <% end %>
+          </div>
+          <div>
+            <div>
+              <%= status.retweet_count %>
+            </div>
+          </div>
         </div>
       </div>
     </div>

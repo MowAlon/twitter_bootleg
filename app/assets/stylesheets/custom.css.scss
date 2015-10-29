@@ -29,17 +29,6 @@ textarea {
   margin-right: auto;
 }
 
-.star {
-  font-size: x-large;
-}
-
-.favorite {
-  color: hotpink;
-  &:hover {
-      color: pink;
-    }
-}
-
 .profile-extras {
   font-size: x-small;
   vertical-align: top;
@@ -48,6 +37,48 @@ textarea {
 .label {
   color: black;
   font-weight: bold;
+}
+
+/* glyphicons */
+
+.big-glyph {
+  font-size: x-large;
+}
+
+.favorited {
+  color: hotpink;
+  &:hover {
+      color: pink;
+    }
+}
+
+.retweeted {
+  color: hotpink;
+  &:hover {
+      color: pink;
+    }
+}
+
+.trash {
+  color: red;
+  float: right;
+  &:hover {
+    color: hotpink;
+  }
+}
+
+.fire {
+  color: red;
+  font-size: x-small;
+  &:hover {
+    color: orange;
+  }
+}
+
+.extras-separator {
+  border-color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* typography */

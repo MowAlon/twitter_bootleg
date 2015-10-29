@@ -9,4 +9,10 @@ class StatusesController < ApplicationController
     redirect_to profile_path
   end
 
+  def destroy
+    status = current_user.twitter.status(params[:id])
+    current_user.twitter.destroy_status(status)
+    redirect_to profile_path
+  end
+
 end

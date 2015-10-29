@@ -18,9 +18,21 @@
   </table>
 
   <h1><%= current_user.name %></h1>
-  <h3><%= link_to "@#{current_user.screen_name}", @user.url.to_s %> says...</h3>
-  <h2 class="center">"<%= @user.status.text %>"</h2>
+  <h3><%= link_to "@#{current_user.screen_name}", @user.url.to_s %> said...</h3>
+</div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 well">
+      <h2 class="center">"<%= @user.status.text %>"</h2>
+      <%= link_to status_path(@user.status.id), method: :delete do %>
+        <i class="glyphicon glyphicon-trash big-glyph trash"></i>
+      <% end %>
+    </div>
+    <div class="col-md-1">
+      <br>
+    </div>
+  </div>
 </div>
 
 <div class="container">
