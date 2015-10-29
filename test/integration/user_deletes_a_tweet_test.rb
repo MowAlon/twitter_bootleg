@@ -28,7 +28,6 @@ class UserRetweets < ActionDispatch::IntegrationTest
       click_link("delete-status")
 
       VCR.use_cassette("user_deleted_a_tweet") do
-  binding.pry
         status_after_delete = @twitter.user.status
         assert_equal Twitter::Tweet, status_after_delete.class
         tweet_count_after_delete = @twitter.user.tweets_count
