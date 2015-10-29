@@ -25,12 +25,12 @@
   </div>
 
   <div class="row well profile-status">
-    <div class="col-md-10">
-        <h2 class="center">"<%= sanitize(auto_link(@user.status.text)) %>"</h2>
+    <div class="col-md-11">
+        <h2 class="center">"<%= twitter_links(@user.status.text) %>"</h2>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-1">
       <div class="trash">
-        <%= link_to status_path(@user.status.id), method: :delete do %>
+        <%= link_to status_path(@user.status.id), method: :delete, data: {confirm: "Are you sure?"} do %>
           <i class="glyphicon glyphicon-trash big-glyph trash"></i>
         <% end %>
       </div>
@@ -38,22 +38,26 @@
   </div>
 
   <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-11">
       <table>
         <tbody class="profile-extras">
           <tr>
-            <td class="label">Description:</td><td><%= @user.description %></td>
+            <td class="labels">Description:</td><td><%= twitter_links(@user.description) %></td>
           </tr>
           <tr>
-            <td class="label">Location:</td><td><%= @user.location %></td>
+            <td class="labels">Location:</td><td><%= @user.location %></td>
           </tr>
           <tr>
-            <td class="label">Website:</td><td><%= link_to @user.website %></td>
+            <td class="labels">Website:</td><td><%= link_to @user.website.to_s, @user.website.to_s %></td>
           </tr>
           <tr>
-            <td class="label">Since:</td><td><%= @user.created_at.strftime("%B %d, %Y") %></td>
+            <td class="labels">Since:</td><td><%= @user.created_at.strftime("%B %d, %Y") %></td>
           </tr>
         </tbody>
       </table>
+    </div>
   </div>
 
 </div>

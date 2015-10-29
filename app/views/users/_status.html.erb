@@ -2,15 +2,15 @@
   <div class="row well col-md-7">
     <div class="row">
       <div class="col-md-2 center">
-        <%= link_to image_tag(status.user.profile_image_url), status.user.url.to_s %>
         <h6><%= link_to status.user.name, status.user.url.to_s %></h6>
+        <%= link_to image_tag(status.user.profile_image_url, class: "small-profile"), status.user.url.to_s %><br>
         <%= link_to friendships_path(status.user.id), method: :delete, class: "fire" do %>
           <i class="glyphicon glyphicon-fire "></i> unfollow <i class="glyphicon glyphicon-fire "></i>
         <% end %>
       </div>
       <div class="col-md-9">
         <%#= pry %>
-        <h2><%= sanitize(auto_link(status.text)) %></h2>
+        <h2><%= twitter_links(status.text) %></h2>
       </div>
       <div class="col-md-1 center">
         <div class="favorite-box">

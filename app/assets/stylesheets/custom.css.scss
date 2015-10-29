@@ -30,21 +30,27 @@ textarea {
 }
 
 .profile-extras {
-  font-size: x-small;
+  font-size: small;
   vertical-align: top;
 }
 
-.label {
-  color: black;
+.labels {
   font-weight: bold;
+  padding-right: 5px;
 }
 
 .well {
+  background-color: white;
   box-shadow: 3px 3px 10px black;
 }
 
 .profile-status {
   margin: 3%;
+}
+
+.small-profile {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 /* glyphicons */
@@ -70,7 +76,6 @@ textarea {
 .trash {
   color: red;
   float: right;
-  margin-top: 50%;
   &:hover {
     color: hotpink;
   }
@@ -78,14 +83,14 @@ textarea {
 
 .fire {
   color: red;
-  font-size: x-small;
+  font-size: small;
   &:hover {
     color: orange;
   }
 }
 
 .extras-separator {
-  border-color: white;
+  border-color: #ddd;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -98,14 +103,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
   font-size: 1.2em;
-  letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
