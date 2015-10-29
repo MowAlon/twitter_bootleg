@@ -16,11 +16,11 @@
           <div>
             <% if !status.favorited? %>
               <%= link_to favorites_path(status.id), id: "favorite-#{status.id}" do %>
-                favorite<i class="glyphicon glyphicon-star-empty big-glyph"></i>
+                <i class="glyphicon glyphicon-star-empty big-glyph"></i>
               <% end %>
             <% else %>
               <%= link_to favorites_path(status.id), method: :delete, id: "unfavorite-#{status.id}" do %>
-                unfavorite<i class="glyphicon glyphicon-star big-glyph favorited"></i>
+                <i class="glyphicon glyphicon-star big-glyph favorited"></i>
               <% end %>
             <% end %>
           </div>
