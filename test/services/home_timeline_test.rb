@@ -1,21 +1,11 @@
 require 'test_helper'
 
-class TwitterTest < ActiveSupport::TestCase
+class HomeTimelineTest < ActiveSupport::TestCase
 
   def setup
     create_alon
-    @alon = User.find_by(name: "Alon Waisman")
-    @twitter = @alon.twitter
-  end
-
-  test "it can connect and retrieve info from Twitter - use #current_user" do
-    VCR.use_cassette("twitter#current_user") do
-      screen_name = @alon.screen_name
-      current_user = @twitter.current_user
-
-      assert_equal "Alon Waisman", current_user.name
-      assert_equal screen_name, current_user.screen_name
-    end
+    alon = User.find_by(name: "Alon Waisman")
+    @twitter = alon.twitter
   end
 
   test "it can get 20 tweets from timeline" do
@@ -25,6 +15,14 @@ class TwitterTest < ActiveSupport::TestCase
 
       assert_equal 20, timeline.count
       assert_equal Twitter::Tweet, tweet.class
+    end
+  end
+
+  test "it gets all the info needed for a status listing" do
+    VCR.use_cassette("twitter#home_timeline") do
+      timeline = @twitter.home_timeline
+      tweet = timeline.first
+
       assert_equal String, tweet.user.name.class
       assert_equal Fixnum, tweet.user.id.class
       assert_equal Addressable::URI, tweet.user.url.class

@@ -18,5 +18,5 @@
 # Ignore VCR cassettes
 /test/cassettes
 
-# Ignore SimpleCov results
-/coverage
+# Ignore SimpleCov output
+coverage
