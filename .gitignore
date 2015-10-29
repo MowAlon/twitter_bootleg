@@ -19,3 +19,4 @@
 /test/cassettes
 
 # Ignore SimpleCov results
+/coverage
