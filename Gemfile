@@ -31,6 +31,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'pry'
+  gem 'byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'simplecov', require: false

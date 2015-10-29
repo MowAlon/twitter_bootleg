@@ -8,11 +8,14 @@ Rails.application.routes.draw do
   get '/logout', as: :logout, to: 'sessions#destroy'
   get '/auth/twitter/callback', to: 'sessions#create'
   get '/profile', to: 'users#show'
-  resources :statuses, only: [:new, :create, :destroy]
-  post '/favorites/:id', as: :favorites, to: 'favorites#create'
+  resources :statuses, only: [:new, :create]
+  get 'statuses/:id', as: :destroy_status, to: 'statuses#destroy'
+  # Using get for create to make Capybara work
+  get '/favorites/:id', as: :favorites, to: 'favorites#create'
   delete '/favorites/:id', to: 'favorites#destroy'
   delete '/friendships/:id', as: :friendships, to: 'friendships#destroy'
-  post '/retweets/:id', as: :retweets, to: 'retweets#create'
+  # Using get for create to make Capybara work
+  get '/retweets/:id', as: :retweets, to: 'retweets#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

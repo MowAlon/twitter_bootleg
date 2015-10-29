@@ -3,17 +3,16 @@ require 'test_helper'
 class HomeTimelineTest < ActiveSupport::TestCase
 
   def setup
-    create_alon
-    alon = User.find_by(name: "Alon Waisman")
-    @twitter = alon.twitter
+    mowalontest
+    @twitter = mowalontest.twitter
   end
 
-  test "it can get 20 tweets from timeline" do
+  test "it can get many tweets from timeline" do
     VCR.use_cassette("twitter#home_timeline") do
       timeline = @twitter.home_timeline
       tweet = timeline.first
 
-      assert_equal 20, timeline.count
+      assert timeline.count > 15
       assert_equal Twitter::Tweet, tweet.class
     end
   end

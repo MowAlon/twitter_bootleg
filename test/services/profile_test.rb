@@ -3,9 +3,8 @@ require 'test_helper'
 class ProfileTest < ActiveSupport::TestCase
 
   def setup
-    create_alon
-    alon = User.find_by(name: "Alon Waisman")
-    @twitter = alon.twitter
+    mowalontest
+    @twitter = mowalontest.twitter
   end
 
   test "it gets all the info needed for the profile summary" do

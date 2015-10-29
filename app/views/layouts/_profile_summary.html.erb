@@ -30,7 +30,7 @@
     </div>
     <div class="col-md-1">
       <div class="trash">
-        <%= link_to status_path(@user.status.id), method: :delete, data: {confirm: "Are you sure?"} do %>
+        <%= link_to destroy_status_path(@user.status.id), id: "delete-status", data: {confirm: "Are you sure?"} do %>
           <i class="glyphicon glyphicon-trash big-glyph trash"></i>
         <% end %>
       </div>

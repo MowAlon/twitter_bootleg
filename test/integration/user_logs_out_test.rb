@@ -4,6 +4,7 @@ class UserLogsOutTest < ActionDispatch::IntegrationTest
   include Capybara::DSL
 
   def setup
+    mowalontest
     reset_session!
     Capybara.app = TwitterBootleg::Application
     stub_omniauth

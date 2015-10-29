@@ -11,12 +11,12 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  def create_alon
-    User.create(name: "Alon Waisman",
-                screen_name: "MowAlon",
-                uid: 150688890,
-                oauth_token: ENV["alon_token"],
-                oauth_token_secret: ENV["alon_secret"])
+  def mowalontest
+    @mowalontest ||= User.create(name: "MowAlon Test",
+                screen_name: "MowAlonTest",
+                uid: 4060312512,
+                oauth_token: ENV["mowalontest_token"],
+                oauth_token_secret: ENV["mowalontest_secret"])
   end
 
   def stub_omniauth
@@ -28,14 +28,14 @@ class ActiveSupport::TestCase
       provider: 'twitter',
       extra: {
         raw_info: {
-          user_id: "150688890",
-          name: "Alon Waisman",
-          screen_name: "MowAlon",
+          user_id: "4060312512",
+          name: "MowAlon Test",
+          screen_name: "MowAlonTest",
         }
       },
       credentials: {
-        token: ENV["alon_token"],
-        secret: ENV["alon_secret"]
+        token: ENV["mowalontest_token"],
+        secret: ENV["mowalontest_secret"]
       }
     })
   end

@@ -4,6 +4,7 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
   include Capybara::DSL
 
   def setup
+    mowalontest
     reset_session!
     Capybara.app = TwitterBootleg::Application
     stub_omniauth
@@ -16,7 +17,7 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
       click_link "Login"
       assert_equal profile_path, current_path
 
-      assert page.has_content?("Alon")
+      assert page.has_content?("MowAlon Test")
       assert page.has_link?("Logout")
       assert page.has_no_link?("Login")
     end
