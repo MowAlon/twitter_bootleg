@@ -1,7 +1,7 @@
-<div class="container col-md-12">
+<div class="container col-md-12" id="profile-summary">
 
   <div class="row center">
-    <h1><%= current_user.name %></h1>
+    <h1><%= @user.name %></h1>
     <%= image_tag @user.profile_image_url.to_s.sub("_normal.","."), size: "300x300" %>
 
     <table class="center twitter-counts">
@@ -21,7 +21,7 @@
       </tr>
     </table>
 
-    <h3><%= link_to "@#{current_user.screen_name}", @user.url.to_s %> said...</h3>
+    <h3><%= link_to "@#{@user.screen_name}", @user.url.to_s %> said...</h3>
   </div>
 
   <div class="row well profile-status">
